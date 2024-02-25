@@ -21,11 +21,14 @@ import Link from "next/link";
 import { language } from "src/config/constants";
 import { useTranslation } from "react-i18next";
 import { TbWorld } from "react-icons/tb";
+import { useRouter } from "next/router";
 
 const Header = ({ onToggle }: HeaderProps): JSX.Element => {
   const { toggleColorMode, colorMode } = useColorMode();
   const { i18n, t } = useTranslation();
+  const router = useRouter();
   const onLanguage = (lng: string) => {
+    router.replace(router.asPath);
     i18n.changeLanguage(lng);
   };
 
@@ -76,7 +79,7 @@ const Header = ({ onToggle }: HeaderProps): JSX.Element => {
             variant={"outline"}
           />
           <Button rightIcon={<BiUserCircle />} colorScheme="facebook">
-            Login
+            {t("Login")}
           </Button>
         </HStack>
       </Flex>

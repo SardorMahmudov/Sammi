@@ -16,16 +16,16 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import { Login, Register, SocialMedia, Verification } from "@/src/components";
+import { AccountRecovery, Login, Register, SocialMedia, Verification } from "@/src/components";
 import { avatars } from "@/src/config/constants";
 
 const AuthPageComponent = () => {
-  const [state, setState] = useState<"login" | "register" | "verification">("verification");
+  const [state, setState] = useState<"login" | "register" | "verification" | "account-recovery">("login");
 
   const breakpointValue = useBreakpointValue({ base: "md", md: "lg" });
   const { t } = useTranslation();
 
-  const onNavigateStateComponent = (comonent: "login" | "register" | "verification") => setState(comonent);
+  const onNavigateStateComponent = (component: "login" | "register" | "verification" | "account-recovery") => setState(component);
 
   const renderStateComponent = () => {
     switch (state) {
@@ -35,6 +35,8 @@ const AuthPageComponent = () => {
         return <Register onNavigateStateComponent={onNavigateStateComponent} />;
       case "verification":
         return <Verification />;
+      case "account-recovery":
+        return <AccountRecovery onNavigateStateComponent={onNavigateStateComponent} />;
     }
   };
   return (

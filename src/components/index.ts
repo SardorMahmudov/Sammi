@@ -13,3 +13,4 @@ export { default as Login } from "./login/login";
 export { default as Register } from "./register/register";
 export { default as Verification } from "./verification/verification";
 export { default as SocialMedia } from "./social-media/social-media";
+export { default as AccountRecovery } from "./account-recovery/account-recovery";

@@ -14,7 +14,6 @@ export default withLayout(ArticlePage);
 export const getServerSideProps: GetServerSideProps<ArticlesPageProps> = async ({ req }) => {
   const lng: Language = req.cookies.i18next as Language;
   const articles = await Articles.getArtciles(lng);
-  console.log(articles);
 
   return {
     props: { articles },

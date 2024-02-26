@@ -5,9 +5,10 @@ import { FaInstagram, FaTelegram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const { t } = useTranslation();
+
   return (
     <Box
-      pl={{ base: "10px", lg: "320px" }}
+      pl={{ base: 0, lg: "320px" }}
       mt={10}
       w={"full"}
       borderTop={"1px"}
@@ -18,10 +19,10 @@ const Footer = () => {
     >
       <Flex justify={"space-between"} align={"center"} h={"full"}>
         <Text>
-          © {format(new Date(), "yyyy")} Sammi. {t("footer", { ns: "layout" })}.
+          © {format(new Date(), "yyyy")} Sammi. {t("footer", { ns: "layout" })}
         </Text>
-        <Flex gap={3} mr={{ base: 5, lg: 10 }}>
-          <IconButton icon={<FaTelegram />} colorScheme="facebook" variant={"outline"} aria-label={"telegram"} />
+        <Flex gap={3} mr={10}>
+          <IconButton icon={<FaTelegram />} colorScheme={"facebook"} variant={"outline"} aria-label={"telegram"} />
           <IconButton icon={<FaInstagram />} colorScheme={"facebook"} variant={"outline"} aria-label={"instagram"} />
           <IconButton icon={<FaYoutube />} colorScheme={"facebook"} variant={"outline"} aria-label={"youtube"} />
         </Flex>

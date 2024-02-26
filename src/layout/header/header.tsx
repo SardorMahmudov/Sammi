@@ -79,7 +79,7 @@ const Header = ({ onToggle }: HeaderProps): JSX.Element => {
             variant={"outline"}
           />
           <Button rightIcon={<BiUserCircle />} colorScheme="facebook">
-            {t("Login")}
+            {t("login", { ns: "layout" })}
           </Button>
         </HStack>
       </Flex>

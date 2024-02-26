@@ -78,7 +78,7 @@ const Header = ({ onToggle }: HeaderProps): JSX.Element => {
             colorScheme={"facebook"}
             variant={"outline"}
           />
-          <Button rightIcon={<BiUserCircle />} colorScheme="facebook">
+          <Button rightIcon={<BiUserCircle />} onClick={() => router.push("/auth")} colorScheme={"facebook"}>
             {t("login", { ns: "layout" })}
           </Button>
         </HStack>

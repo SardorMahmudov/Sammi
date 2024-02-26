@@ -8,3 +8,4 @@ export { default as Newsletter } from "./newsletter/newsletter";
 export { default as Sposorship } from "./sposorship/sposorship";
 export { default as PopularCoursesCard } from "./popular-courses-card/popular-courses-card";
 export { default as AllCoursesCard } from "./all-courses-card/all-courses-card";
+export { default as Pricing } from "./pricing/pricing";

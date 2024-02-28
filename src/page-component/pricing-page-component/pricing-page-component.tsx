@@ -22,8 +22,7 @@ const PrisingPageComponent = () => {
         >
           <Stack width={{ base: "100%", md: "40%" }} textAlign={"center"}>
             <Heading size={"lg"}>
-              {t("pricing_title", { ns: "global" })}
-              <Text color="green.400">{t("pricing_title_green", { ns: "global" })}</Text>
+              {t("pricing_title", { ns: "global" })} <Text color="green.400">{t("pricing_title_green", { ns: "global" })}</Text>
             </Heading>
           </Stack>
           <Stack width={{ base: "100%", md: "60%" }}>

@@ -5,8 +5,12 @@ import { CiViewList } from "react-icons/ci";
 import { SiGoogleanalytics } from "react-icons/si";
 import ReactStars from "react-stars";
 import { AllCoursesCardProps } from "./all-courses-card.props";
+import { useRouter } from "next/router";
 
 const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
+  const router = useRouter();
+
+  const onDetailedCourse = () => router.push(`/courses/${course.slug}`);
   return (
     <>
       <Box py={4}>
@@ -18,6 +22,8 @@ const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
             h={"250px"}
             borderRadius={"lg"}
             objectFit={"cover"}
+            onClick={onDetailedCourse}
+            cursor={"pointer"}
           />
           <Stack>
             <HStack>
@@ -62,7 +68,7 @@ const AllCoursesCard = ({ course }: AllCoursesCardProps) => {
                 <Button rightIcon={<BsMinecartLoaded />} colorScheme={"facebook"}>
                   Add to cart
                 </Button>
-                <Button colorScheme={"facebook"} variant={"outline"}>
+                <Button onClick={onDetailedCourse} colorScheme={"facebook"} variant={"outline"}>
                   Detail
                 </Button>
               </Flex>

@@ -1,3 +1,4 @@
+import Seo from "@/src/layout/seo/seo";
 import { GetServerSideProps } from "next";
 import { ArticleType } from "src/interfaces/article.interface";
 import { Language } from "src/interfaces/constants.interface";
@@ -6,7 +7,11 @@ import { ArticleDetailedComponent } from "src/page-component";
 import { Articles } from "src/services/article.service";
 
 const ArtcileDetailPage = ({ article }: ArticleDetailedPageProps) => {
-  return <ArticleDetailedComponent article={article} />;
+  return (
+		<Seo metaTitle={article.title} metaDescription={article.excerpt}>
+			<ArticleDetailedComponent article={article} />
+		</Seo>
+	);
 };
 
 export default withLayout(ArtcileDetailPage);

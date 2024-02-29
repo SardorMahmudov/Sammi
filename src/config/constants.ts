@@ -2,7 +2,6 @@ import { AiFillAmazonCircle, AiOutlineDashboard, AiOutlineDollar } from "react-i
 import { FaApplePay, FaBookReader, FaDraftingCompass, FaQuestionCircle } from "react-icons/fa";
 import { CiViewList } from "react-icons/ci";
 import { MdImportContacts, MdOutlineContactMail } from "react-icons/md";
-import { SiAmd, SiCisco, SiLogitech, SiSpotify } from "react-icons/si";
 import {
   AnnouncementIcons,
   CodingIcons,
@@ -20,7 +19,8 @@ import {
   TurkIcon,
   UzbIcons,
 } from "src/icons";
-import { CourseType } from "../interfaces/course.interface";
+import { SiAmd, SiCisco, SiLogitech, SiSpotify } from "react-icons/si";
+import { CourseType } from "src/interfaces/course.interface";
 
 export const navigation = [
   {
@@ -186,8 +186,8 @@ export const courses: CourseType[] = [
   },
   {
     image: "https://media.graphassets.com/54vR0DStGoFuZBVkFwWQ",
-    title: "VueJS full course",
     slug: "vuejs",
+    title: "VueJS full course",
     lessonCount: 30,
     totalHour: 10.6,
     level: "Beginner",
@@ -218,8 +218,8 @@ export const courses: CourseType[] = [
   },
   {
     image: "https://media.graphassets.com/xactyo8TtyTIkAcMWvSm",
-    title: "VueX full course",
     slug: "vuex",
+    title: "VueX full course",
     lessonCount: 120,
     totalHour: 24.6,
     level: "Beginner",
@@ -348,5 +348,23 @@ export const avatars = [
   {
     name: "Christian Nwamba",
     url: "https://bit.ly/code-beast",
+  },
+];
+
+export const voiceLanguages = [
+  {
+    language: "en",
+    codes: "en-US",
+    voiceUrl: "Google US English",
+  },
+  {
+    language: "tr",
+    codes: "tr-TR",
+    voiceUrl: "Yelda",
+  },
+  {
+    language: "ru",
+    codes: "ru-RU",
+    voiceUrl: "Microsoft Pavel - Russian (Russia)",
   },
 ];
